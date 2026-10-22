@@ -1,0 +1,752 @@
+
+/* =========================================
+   FITPRO - SITE PERSONAL TRAINER
+   ========================================= */
+
+/* 1. CONFIGURAÇÕES GERAIS */
+
+:root {
+    --azul: #1E3A8A;
+    --laranja: #F97316;
+    --branco: #FFFFFF;
+    --fundo: #F3F6FB;
+    --texto: #263244;
+    --cinza: #64748B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--texto);
+    line-height: 1.7;
+    background: var(--branco);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 90px 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+h2 span,
+h1 span {
+    color: var(--laranja);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.subtitulo {
+    color: var(--laranja);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.botao {
+    display: inline-block;
+    background: var(--laranja);
+    color: var(--branco);
+    padding: 14px 28px;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #DD5F0A;
+    transform: translateY(-3px);
+}
+
+/* 2. CABEÇALHO */
+
+.cabecalho {
+    background: var(--azul);
+    color: var(--branco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px #00000020;
+}
+
+.cabecalho .container {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--laranja);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--laranja);
+}
+
+/* 3. INÍCIO */
+
+.inicio {
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    background: linear-gradient(
+        120deg,
+        #102453,
+        var(--azul)
+    );
+}
+
+.inicio-conteudo {
+    display: flex;
+    align-items: center;
+}
+
+.inicio-texto {
+    max-width: 720px;
+}
+
+.inicio h1 {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+
+.inicio h1 span {
+    display: block;
+}
+
+.inicio-texto > p:not(.subtitulo) {
+    max-width: 600px;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* 4. SOBRE */
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sobre-imagem {
+    min-height: 400px;
+    background: var(--fundo);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.sobre-texto > p {
+    margin-bottom: 20px;
+}
+
+.sobre-dados {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.sobre-dados div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-dados strong {
+    font-size: 1.8rem;
+    color: var(--azul);
+}
+
+.sobre-dados span {
+    font-size: 0.8rem;
+    color: var(--cinza);
+}
+
+/* 5. SERVIÇOS */
+
+.servicos {
+    background: var(--fundo);
+}
+
+.titulo-secao {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.card-servico {
+    background: var(--branco);
+    padding: 30px 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #0000000D;
+    transition: 0.3s;
+}
+
+.card-servico:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #0000001A;
+}
+
+.icone {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+
+.card-servico {
+    background: var(--branco);
+    padding: 30px 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #0000000D;
+    transition: 0.3s;
+
+    /* Alinhamento dos elementos */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-servico:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #0000001A;
+}
+
+/* Alinhamento dos ícones */
+.card-servico .icone {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Alinhamento dos títulos */
+.card-servico h3 {
+    color: var(--azul);
+    margin-bottom: 15px;
+    min-height: 52px;
+}
+
+/* Textos dos serviços */
+.card-servico p {
+    color: var(--cinza);
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* Links alinhados na parte inferior */
+.card-servico a {
+    color: var(--laranja);
+    font-weight: 700;
+    margin-top: auto;
+}
+
+
+/* 6. DEPOIMENTOS */
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.card-depoimento {
+    padding: 30px;
+    background: var(--fundo);
+    border-radius: 12px;
+    border-left: 4px solid var(--laranja);
+
+    /* Organiza os elementos verticalmente */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Alinha os nomes na parte inferior dos cartões */
+.card-depoimento h3 {
+    color: var(--azul);
+    margin-top: auto;
+}
+
+.estrelas {
+    color: var(--laranja);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.card-depoimento p {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.card-depoimento h3 {
+    color: var(--azul);
+}
+
+.card-depoimento span {
+    color: var(--cinza);
+    font-size: 0.85rem;
+}
+
+/* 7. CONTATO */
+
+.contato {
+    background: var(--fundo);
+}
+
+.contato-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.contato-texto > p {
+    margin-bottom: 20px;
+}
+
+.informacoes-contato {
+    margin-top: 30px;
+}
+
+.informacoes-contato p {
+    margin-bottom: 15px;
+}
+
+.formulario {
+    background: var(--branco);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #0000000D;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #CBD5E1;
+    border-radius: 7px;
+    font: inherit;
+    font-size: 0.9rem;
+}
+
+
+/* Campo de mensagem com tamanho fixo */
+.campo textarea {
+    height: 150px;
+    resize: none;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: 2px solid var(--laranja);
+    border-color: var(--laranja);
+}
+
+.formulario .botao {
+    width: 100%;
+}
+
+.mapa {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* 8. RODAPÉ */
+
+.rodape {
+    background: #102453;
+    color: var(--branco);
+    padding: 50px 0;
+}
+
+.rodape-conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.rodape h3 {
+    margin-bottom: 15px;
+}
+
+.rodape p {
+    margin-top: 10px;
+}
+
+.redes-sociais a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.redes-sociais a:hover {
+    color: var(--laranja);
+}
+
+/* 9. TABLETS - 768px */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 65px 0;
+    }
+
+    .cabecalho .container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .inicio h1 {
+        font-size: 2.6rem;
+    }
+
+    .sobre-conteudo,
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .depoimentos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* 10. CELULARES - 425px */
+
+@media (max-width: 425px) {
+
+    html {
+        scroll-padding-top: 140px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        gap: 10px 15px;
+    }
+
+    .menu a {
+        font-size: 0.8rem;
+    }
+
+    .inicio {
+        min-height: 480px;
+    }
+
+    .inicio h1 {
+        font-size: 2rem;
+    }
+
+    .inicio-texto > p:not(.subtitulo) {
+        font-size: 0.95rem;
+    }
+
+    .sobre-dados {
+        flex-direction: column;
+    }
+
+    .servicos-grid,
+    .depoimentos-grid,
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        padding: 22px;
+    }
+
+    .mapa iframe {
+        height: 280px;
+    }
+
+}
+
+
+/* Link do Instagram */
+.informacoes-contato a {
+    color: #1E3A8A;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.informacoes-contato a:hover {
+    color: #F97316;
+    text-decoration: underline;
+}
+
+
+/* Botão animado da página inicial */
+
+.botao-inicio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #F97316;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.25);
+}
+
+.botao-inicio .seta {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.botao-inicio:hover {
+    background: #ea580c;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+}
+
+.botao-inicio:hover .seta {
+    transform: translateX(6px);
+}
+
+
+
+/* ====================================
+   CONTATO - LAYOUT FINAL
+   ==================================== */
+
+.contato {
+    padding: 60px 0 45px;
+    background: #F3F6FB;
+}
+
+.contato-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.contato-texto {
+    min-width: 0;
+}
+
+.informacoes-contato {
+    margin-top: 25px;
+}
+
+.informacoes-contato p {
+    margin-bottom: 12px;
+}
+
+/* Mapa abaixo da localização */
+
+.mapa {
+    width: 100%;
+    max-width: none;
+    margin: 25px 0 0;
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #00000015;
+}
+
+/* Formulário */
+
+.formulario {
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.formulario .campo textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Rodapé mais próximo do contato */
+
+.rodape {
+    padding: 35px 0 20px;
+}
+
+.rodape-conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 425px) {
+    .contato {
+        padding: 40px 0 30px;
+    }
+
+    .mapa iframe {
+        height: 250px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+
+/* Organização do contato */
+.contato-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+/* Coluna esquerda */
+.contato-texto {
+    min-width: 0;
+}
+
+/* Mapa abaixo das informações */
+.contato-texto .mapa {
+    width: 100%;
+    max-width: none;
+    margin: 25px 0 0;
+}
+
+.contato-texto .mapa iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* Reduz o espaço antes do rodapé */
+.contato {
+    padding: 60px 0 40px;
+}
+
+/* Tablets e celulares */
+@media (max-width: 768px) {
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+    }
+}
